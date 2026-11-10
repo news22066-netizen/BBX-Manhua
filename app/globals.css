@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --accent: 0 0 0;
+  --accent-bright: 64 64 64;
+  --accent-fg: 255 255 255;
+}
+html.dark {
+  --accent: 255 255 255;
+  --accent-bright: 229 229 229;
+  --accent-fg: 0 0 0;
+}
+
+html { color-scheme: light; }
+html.dark { color-scheme: dark; }
+
+:focus-visible { outline: 2px solid rgb(var(--accent)); outline-offset: 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { scroll-behavior: auto !important; transition: none !important; }
+}
