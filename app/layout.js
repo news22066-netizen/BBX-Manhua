@@ -1,6 +1,7 @@
 import './globals.css';
 import { Poppins } from 'next/font/google';
 import Header from '@/components/Header';
+import { Analytics } from '@vercel/analytics/next'; // 1. Added Import
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -28,6 +29,7 @@ export default function RootLayout({ children }) {
       <body className="min-h-screen bg-white font-sans text-black antialiased dark:bg-black dark:text-white">
         <Header />
         {children}
+        <Analytics /> {/* 2. Added Component */}
       </body>
     </html>
   );
