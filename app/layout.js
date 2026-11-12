@@ -1,7 +1,7 @@
 import './globals.css';
 import { Poppins } from 'next/font/google';
 import Header from '@/components/Header';
-import { Analytics } from '@vercel/analytics/next'; // 1. Added Import
+import { Analytics } from '@vercel/analytics/react';
 
 const poppins = Poppins({
   subsets: ['latin'],
